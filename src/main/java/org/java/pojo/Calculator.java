@@ -35,8 +35,11 @@ public class Calculator {
 		return getNum1() - getNum2();
 	}
 	
-	public float getDivisione(float num1, float num2) {
+	public float getDivisione(float num1, float num2) throws Exception{
 		System.out.println("Risultato: ");
+		if(num2 == 0) {
+			throw new Exception("Non puoi dividere il numero per 0");
+		}
 		return getNum1() / getNum2();
 	}
 	
